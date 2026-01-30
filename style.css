@@ -45,7 +45,7 @@ body {
 
 form {
     width: 300px;
-    height: 250px;
+    height: 280px;
     border: 3px solid var(--border-color);
     padding: 0 10px;
 }
@@ -63,6 +63,7 @@ h1 {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    gap: 15px;
     /* border: 1px solid red; */
 }
 
@@ -88,6 +89,58 @@ h1 {
     opacity: 0.9;
 }
 
+.cnopka:active {
+    transform: scale(1.03);
+}
+
 .conteiner_dla_radio input[type="radio"] {
     display: none;
+}
+
+.zagruska{
+    display: flex;
+    gap: 8px;
+
+    /* border: 1px solid red; */
+}
+
+.point_zagruska {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: var(--border-color);
+}
+
+/* .zagruska:nth-child(1) { animation: zagruzka 1s ease 0s infinite normal none running; }
+.zagruska:nth-child(2) { animation: zagruzka 1s ease 0.8s infinite normal none running; }
+.zagruska:nth-child(3) { animation: zagruzka 1s ease 0.6s infinite normal none running; } */
+
+.point_zagruska_1 {
+    animation: zagruzka 1s linear 0s infinite alternate;
+}
+
+.point_zagruska_2 {
+    animation: zagruzka 1s linear 0.1s infinite alternate;
+}
+
+.point_zagruska_3 {
+    animation: zagruzka 1s linear 0.2s infinite alternate;
+}
+
+@keyframes zagruzka {
+  0% {
+    transform: scale(0.3);
+  }
+  25% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.4);
+  }
+  100% {
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(0.8);
+  }
 }
